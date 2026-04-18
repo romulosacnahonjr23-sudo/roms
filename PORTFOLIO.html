@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background:#0f172a;
+      color:#e2e8f0;
+    }
+    header {
+      padding: 20px;
+      text-align:center;
+      background:#020617;
+      border-bottom:1px solid #1e293b;
+    }
+    header h1 { font-size:2rem; }
+    nav {
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      padding:10px;
+      background:#020617;
+    }
+    nav a {
+      color:#94a3b8;
+      text-decoration:none;
+      font-size:14px;
+    }
+    nav a:hover { color:#38bdf8; }
+
+    section {
+      padding:60px 20px;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .hero {
+      text-align:center;
+    }
+    .avatar {
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid #38bdf8;
+      margin-bottom:15px;
+    }
+    .hero {
+      text-align:center;
+    }
+    .hero h2 {
+      font-size:2.5rem;
+      margin-bottom:10px;
+    }
+    .hero p {
+      color:#94a3b8;
+    }
+
+    .projects {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap:20px;
+    }
+    .card {
+      background:#020617;
+      padding:20px;
+      border-radius:15px;
+      border:1px solid #1e293b;
+      transition:0.3s;
+    }
+    .card:hover {
+      transform:translateY(-5px);
+      border-color:#38bdf8;
+    }
+
+    .skills span {
+      display:inline-block;
+      background:#1e293b;
+      padding:8px 12px;
+      margin:5px;
+      border-radius:10px;
+      font-size:12px;
+    }
+
+    footer {
+      text-align:center;
+      padding:20px;
+      border-top:1px solid #1e293b;
+      margin-top:40px;
+      font-size:12px;
+      color:#94a3b8;
+    }
+
+    button {
+      background:#38bdf8;
+      border:none;
+      padding:10px 20px;
+      border-radius:10px;
+      cursor:pointer;
+      margin-top:10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Portfolio</h1>
+  <p>Welcome to my personal website</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+  <a href="https://via.placeholder.com/600" target="_blank">
+  <img src="https://via.placeholder.com/150" alt="Profile Picture" class="avatar">
+</a>
+  <h2>Hello, I'm Romulo 👋</h2>
+  <p>A beginner web developer passionate about creating websites.</p>
+  <button onclick="scrollToSection('projects')">View My Work</button>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am learning web development and building projects to improve my skills. I enjoy creating clean and modern websites.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>Project 1</h3>
+      <p>Description of your project here.</p>
+    </div>
+    <div class="card">
+      <h3>Project 2</h3>
+      <p>Description of your project here.</p>
+    </div>
+    <div class="card">
+      <h3>Project 3</h3>
+      <p>Description of your project here.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: your@email.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Romulo Portfolio</p>
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
